@@ -85,34 +85,34 @@ export default class Engine {
     }
     // global event listener
     // key
-    document.addEventListener('keyup', (e) => {
+    document.querySelector("[hyper=TowerBuilder]").addEventListener('keyup', (e) => {
       self.keyListener(e, 'keyup')
     }, false)
-    document.addEventListener('keydown', (e) => {
+    document.querySelector("[hyper=TowerBuilder]").addEventListener('keydown', (e) => {
       self.keyListener(e, 'keydown')
     }, false)
-    document.addEventListener('keypress', (e) => {
+    document.querySelector("[hyper=TowerBuilder]").addEventListener('keypress', (e) => {
       self.keyListener(e, 'keypress')
     }, false)
     // touch
     if (this.isTouchDevice) {
-      document.addEventListener('touchstart', (e) => {
+      document.querySelector("[hyper=TowerBuilder]").addEventListener('touchstart', (e) => {
         self.touchStartListener(e)
       }, false)
-      document.addEventListener('touchend', (e) => {
+      document.querySelector("[hyper=TowerBuilder]").addEventListener('touchend', (e) => {
         self.touchEndListener(e)
       }, false)
-      document.addEventListener('touchmove', (e) => {
+      document.querySelector("[hyper=TowerBuilder]").addEventListener('touchmove', (e) => {
         self.touchMoveListener(e)
       }, false)
     } else {
-      document.addEventListener('mousedown', (e) => {
+      document.querySelector("[hyper=TowerBuilder]").addEventListener('mousedown', (e) => {
         self.touchStartListener(e)
       }, false)
-      document.addEventListener('mouseup', (e) => {
+      document.querySelector("[hyper=TowerBuilder]").addEventListener('mouseup', (e) => {
         self.touchEndListener(e)
       }, false)
-      document.addEventListener('mousemove', (e) => {
+      document.querySelector("[hyper=TowerBuilder]").addEventListener('mousemove', (e) => {
         self.touchMoveListener(e)
       }, false)
     }
